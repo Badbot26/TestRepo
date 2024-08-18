@@ -10,8 +10,8 @@ public static class DataLoader
     {
         try
         {
-            string path = @"c:\TestApps\TestRepo\TestConsole\Data\";
-            string filename = "dummydata.txt";
+            string path = TestConsole.Settings.Paths.DummyDataPath;
+            string filename = TestConsole.Settings.Paths.DummyDataFile;
             
             // create directory if does not exist
             if (!Directory.Exists(path))
