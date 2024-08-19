@@ -1,9 +1,9 @@
-using TestConsole.Reader;
+namespace TestConsole.Reader;
 
 public class TextFileReader : IReader
 {
-    private string _path;
-    private string _filename;
+    private readonly string _path;
+    private readonly string _filename;
     private string _exceptionMessage;
 
     public string ExceptionMessage { get { return _exceptionMessage; } }
@@ -12,6 +12,7 @@ public class TextFileReader : IReader
     {
         _path = path;
         _filename = filename;
+        _exceptionMessage = string.Empty;
     }
 
     public void Read()
