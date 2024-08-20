@@ -6,7 +6,7 @@ public static class DataLoader
 {
     private static string _lastError = string.Empty;
     public static string LastError { get {return _lastError;}}
-    public static bool LoadDummyDataIntoTextFile()
+    public static bool LoadDummyDataIntoTextFile(bool overwrite = true)
     {
         try
         {
@@ -20,7 +20,11 @@ public static class DataLoader
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < 100000; i++)
                 stringBuilder.Append(i + "somexyztexthere");
-            File.WriteAllText(path + filename, stringBuilder.ToString());
+
+            if (overwrite)
+                File.WriteAllText(path + filename, stringBuilder.ToString());
+            else
+                File.AppendAllText(path + filename, stringBuilder.ToString());
             return true;
         }
         catch (Exception ex)
