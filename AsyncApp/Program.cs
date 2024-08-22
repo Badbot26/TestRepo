@@ -33,8 +33,8 @@ static string UseLogData()
 }
 
 Console.WriteLine("entered program");
-var useLogdataResponse = UseLogData();
-Console.WriteLine("response: " + useLogdataResponse);
+var useLogDataResponse = UseLogData();
+Console.WriteLine("response: " + useLogDataResponse);
 Console.WriteLine("leaving program");
 
 Console.ReadLine();
