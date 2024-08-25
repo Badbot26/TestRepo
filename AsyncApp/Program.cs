@@ -1,4 +1,14 @@
-﻿static void SimulateLongRunningTask(int seconds)
+﻿static async Task SimulateLongRunningTaskAsync(int seconds)
+{
+    await Task.Delay(seconds * 1000);
+
+    // log to text file and console to show when execution in this method resumes
+    string logMessage = DateTime.Now.ToString() + ": logged" + Environment.NewLine;
+    Console.Write(logMessage);
+    await File.AppendAllTextAsync("c:/users/waynem/desktop/log.txt", logMessage);
+}
+
+static void SimulateLongRunningTask(int seconds)
 {
     Thread.Sleep(seconds * 1000);
     
@@ -6,6 +16,21 @@
     string logMessage = DateTime.Now.ToString() + ": logged" + Environment.NewLine;
     Console.Write(logMessage);
     File.AppendAllText("c:/users/waynem/desktop/log.txt", logMessage);
+}
+
+static async Task<string> LogDataAsync()
+{
+    System.Console.WriteLine("entered LogDataAsync()");
+    try
+    {
+        await SimulateLongRunningTaskAsync(seconds: 3);
+    }
+    catch
+    {
+        return "unsuccessful";
+    }
+    System.Console.WriteLine("leaving LogDataAsync()");
+    return "success";
 }
 
 static string LogData()
@@ -24,6 +49,14 @@ static string LogData()
         return "success";
 }
 
+static async Task<string> UseLogDataAsync()
+{
+    System.Console.WriteLine("entered UseLogDataAsync()");
+    var logDataResponse = await LogDataAsync();
+    System.Console.WriteLine("leaving UseLogDataAsync()");
+    return logDataResponse;
+}
+
 static string UseLogData()
 {
     Console.WriteLine("entered UseLogData()");
@@ -33,7 +66,7 @@ static string UseLogData()
 }
 
 Console.WriteLine("entered program");
-var useLogDataResponse = UseLogData();
+var useLogDataResponse = await UseLogDataAsync();
 Console.WriteLine("response: " + useLogDataResponse);
 Console.WriteLine("leaving program");
 
