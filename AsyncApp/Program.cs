@@ -1,12 +1,11 @@
 ﻿static async Task SimulateLongRunningTaskAsync(int seconds)
 {
-    System.Console.WriteLine("entered SimulateLongRunningTaskAsync at " + DateTime.Now);
+    System.Console.WriteLine($"entered SimulateLongRunningTaskAsync at {DateTime.Now}");
     await Task.Delay(seconds * 1000);
 
     // log to text file and console to show when execution in this method resumes
-    string logMessage = ": logged" + Environment.NewLine;
-    Console.Write(DateTime.Now.ToString() + logMessage);
-    await File.AppendAllTextAsync("c:/users/waynem/desktop/log.txt", DateTime.Now.ToString() + logMessage);
+    Console.WriteLine($"{DateTime.Now}: logged");
+    await File.AppendAllTextAsync("c:/users/waynem/desktop/log.txt", $"{DateTime.Now}: logged{Environment.NewLine}");
 }
 
 static void SimulateLongRunningTask(int seconds)
@@ -14,9 +13,8 @@ static void SimulateLongRunningTask(int seconds)
     Thread.Sleep(seconds * 1000);
     
     // log to text file and console to show when execution in this method resumes
-    string logMessage = DateTime.Now.ToString() + ": logged" + Environment.NewLine;
-    Console.Write(logMessage);
-    File.AppendAllText("c:/users/waynem/desktop/log.txt", logMessage);
+    Console.WriteLine($"{DateTime.Now}: logged");
+    File.AppendAllText("c:/users/waynem/desktop/log.txt", $"{DateTime.Now}: logged{Environment.NewLine}");
 }
 
 static async Task<string> LogDataAsync()
@@ -68,7 +66,7 @@ static string UseLogData()
 
 Console.WriteLine("entered program");
 var useLogDataResponse = await UseLogDataAsync();
-Console.WriteLine("response: " + useLogDataResponse);
+Console.WriteLine($"response: {useLogDataResponse}");
 Console.WriteLine("leaving program");
 
 Console.ReadLine();
