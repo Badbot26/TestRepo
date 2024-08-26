@@ -1,11 +1,12 @@
 ﻿static async Task SimulateLongRunningTaskAsync(int seconds)
 {
+    System.Console.WriteLine("entered SimulateLongRunningTaskAsync at " + DateTime.Now);
     await Task.Delay(seconds * 1000);
 
     // log to text file and console to show when execution in this method resumes
-    string logMessage = DateTime.Now.ToString() + ": logged" + Environment.NewLine;
-    Console.Write(logMessage);
-    await File.AppendAllTextAsync("c:/users/waynem/desktop/log.txt", logMessage);
+    string logMessage = ": logged" + Environment.NewLine;
+    Console.Write(DateTime.Now.ToString() + logMessage);
+    await File.AppendAllTextAsync("c:/users/waynem/desktop/log.txt", DateTime.Now.ToString() + logMessage);
 }
 
 static void SimulateLongRunningTask(int seconds)
