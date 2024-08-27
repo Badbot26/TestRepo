@@ -22,7 +22,8 @@ static async Task<string> LogDataAsync()
     System.Console.WriteLine("entered LogDataAsync()");
     try
     {
-        await SimulateLongRunningTaskAsync(seconds: 3);
+        // don't await, implement fire and forget strategy
+        SimulateLongRunningTaskAsync(seconds: 3);
     }
     catch
     {
