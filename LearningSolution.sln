@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebApi", "MyWebApi\MyWebA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnitTutorial", "xUnitTutorial\xUnitTutorial.csproj", "{9543F6F7-51B2-46CB-BA2A-7FCECF714317}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApi.NSubstitute.Tests", "MyWebApi.NSubstitute.Tests\MyWebApi.NSubstitute.Tests.csproj", "{4E43EA63-4E61-448E-A164-B3FE4E1536C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9543F6F7-51B2-46CB-BA2A-7FCECF714317}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9543F6F7-51B2-46CB-BA2A-7FCECF714317}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9543F6F7-51B2-46CB-BA2A-7FCECF714317}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E43EA63-4E61-448E-A164-B3FE4E1536C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E43EA63-4E61-448E-A164-B3FE4E1536C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E43EA63-4E61-448E-A164-B3FE4E1536C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E43EA63-4E61-448E-A164-B3FE4E1536C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
