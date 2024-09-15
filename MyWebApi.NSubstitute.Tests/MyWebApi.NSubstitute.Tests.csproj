@@ -16,4 +16,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyWebApi\MyWebApi.csproj" />
+  </ItemGroup>
+
 </Project>
