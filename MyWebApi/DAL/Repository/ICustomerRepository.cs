@@ -6,7 +6,7 @@ namespace MyWebApi.DAL.Repository;
 
 public interface ICustomerRepository
 {
-    Task<Customer> GetCustomerAsync(Guid customerId);
-    Task<List<Customer>> GetCustomersAsync();
-    Task AddCustomerAsync(Customer customer);
+    Task<ICustomer> GetCustomerAsync(Guid customerId);
+    Task<List<ICustomer>> GetCustomersAsync();
+    Task AddCustomerAsync(ICustomer customer);
 }

@@ -15,17 +15,17 @@ public class CustomerService : ICustomerService
         _customerRepository = customerRepository;
     }
 
-    public async Task<Customer> GetCustomerAsync(Guid customerId)
+    public async Task<ICustomer> GetCustomerAsync(Guid customerId)
     {
         return await _customerRepository.GetCustomerAsync(customerId);
     }
 
-    public async Task<List<Customer>> GetCustomersAsync()
+    public async Task<List<ICustomer>> GetCustomersAsync()
     {
         return await _customerRepository.GetCustomersAsync();
     }
 
-    public async Task AddCustomerAsync(Customer customer)
+    public async Task AddCustomerAsync(ICustomer customer)
     {
         await _customerRepository.AddCustomerAsync(customer);
     }

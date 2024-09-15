@@ -30,7 +30,7 @@ public class CustomerController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> AddCustomer([FromBody] string name)
     {
-        Customer customer = new Customer() { Name = name, CustomerId = Guid.NewGuid() };
+        ICustomer customer = new Customer() { Name = name, CustomerId = Guid.NewGuid() };
         await _customerService.AddCustomerAsync(customer);
 
         return CreatedAtAction(nameof(AddCustomer), customer);
