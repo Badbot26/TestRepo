@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncApp", "AsyncApp\AsyncA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebApi", "MyWebApi\MyWebApi.csproj", "{B61DECD0-81ED-409D-A097-562C11593E20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xUnitTutorial", "xUnitTutorial\xUnitTutorial.csproj", "{9543F6F7-51B2-46CB-BA2A-7FCECF714317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "xUnitTutorial", "xUnitTutorial\xUnitTutorial.csproj", "{9543F6F7-51B2-46CB-BA2A-7FCECF714317}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApi.NSubstitute.Tests", "MyWebApi.NSubstitute.Tests\MyWebApi.NSubstitute.Tests.csproj", "{4E43EA63-4E61-448E-A164-B3FE4E1536C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyWebApi.NSubstitute.Tests", "MyWebApi.NSubstitute.Tests\MyWebApi.NSubstitute.Tests.csproj", "{4E43EA63-4E61-448E-A164-B3FE4E1536C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{B9F4E23D-EC98-4B90-846B-AB024811E795}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4E43EA63-4E61-448E-A164-B3FE4E1536C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E43EA63-4E61-448E-A164-B3FE4E1536C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E43EA63-4E61-448E-A164-B3FE4E1536C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F4E23D-EC98-4B90-846B-AB024811E795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F4E23D-EC98-4B90-846B-AB024811E795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F4E23D-EC98-4B90-846B-AB024811E795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F4E23D-EC98-4B90-846B-AB024811E795}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
