@@ -81,5 +81,10 @@ namespace DesignPatterns.SolidPrinciples.OpenClosed
         {
             bool IsSatisfied(T t);
         }
+
+        public interface IFilter<T>
+        {
+            IEnumerable<T> Filter(IEnumerable<T> items, ISpecification<T> spec);
+        }
     }
 }
