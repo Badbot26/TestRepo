@@ -1,7 +1,8 @@
 ﻿// config
 var solidPrinciples_SingleResponsibilityPrinciple = false;
 var solidPrinciples_OpenClosedPrinciple = false;
-var solidPrinciples_LiskovSubstitutionPrinciple = true;
+var solidPrinciples_LiskovSubstitutionPrinciple = false;
+var solidPrinciples_InterfaceSegregationPrinciple = true;
 
 if (solidPrinciples_SingleResponsibilityPrinciple)
     DesignPatterns.SolidPrinciples.SingleResponsibility.Engine.Run();
@@ -11,3 +12,6 @@ if (solidPrinciples_OpenClosedPrinciple)
 
 if (solidPrinciples_LiskovSubstitutionPrinciple)
     DesignPatterns.SolidPrinciples.LiskovSubstitution.Engine.Run();
+
+if (solidPrinciples_InterfaceSegregationPrinciple)
+    DesignPatterns.SolidPrinciples.InterfaceSegregation.Engine.Run();
